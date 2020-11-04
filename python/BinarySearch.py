@@ -9,14 +9,15 @@ def binarySearch(arr,n):
     while low<=high:
         mid=(low+high)//2
         if arr[mid]==n:
-            print('Found'+str(mid))
-            break
+            print('Found '+str(mid))
+            return
         elif arr[mid]>n:
             high=mid-1
         elif arr[mid]<n:
             low=mid+1
     if low>high:
-        print('Not found')            
+        print('Not found') 
+        return          
     
 
 print(binarySearch(arrayNumbers,34)) 
